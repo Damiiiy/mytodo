@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'todo'
+    'todo',
+    'whitenoise'
 ]
 
 MIDDLEWARE = [
@@ -78,12 +79,8 @@ WSGI_APPLICATION = 'todo_pro.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
+# DATABASE_URL = 'postgres://ndydb_user:odad4HUujYtKsYG1SnoH3DS3S7iTl0O6@dpg-cmj7c3da73kc739onaag-a/ndydb'
 
-DATABASE = {
-    'default': dj_database_url.parse(
-        os.environ.get('DATABASE_URL')
-    )
-}
 
 # DATABASES = {
 #     'default': {
@@ -91,6 +88,13 @@ DATABASE = {
 #         'NAME': BASE_DIR / 'db.sqlite3',
 #     }
 # }
+DATABASES = {
+    'default': dj_database_url.parse(
+        'postgres://ndydb_user:odad4HUujYtKsYG1SnoH3DS3S7iTl0O6@dpg-cmj7c3da73kc739onaag-a.oregon-postgres.render.com/ndydb',
+        conn_max_age=600,
+        conn_health_checks=True,
+    )
+}
 
 
 # Password validation
