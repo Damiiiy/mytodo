@@ -1,0 +1,27 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+{% comment %} <body>
+        {% for x in todor%}
+            <H3>title : {{x.title}} </H3>
+            <h3>description: {{x.description}}</h3>
+            <h3>created: {{x.created}}</h3>
+            <h3>Completed status: {{x.complete}}</h3>
+        {% endfor %}
+{% endcomment %}
+<body>
+    <h1>Welcome to the Dashboard: {{user.usernamw}}</h1>
+    <h2>Todo List:</h2>
+    <ul>
+        {% for todo in todos %}
+            <li>{{ todo.task }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
+
+</body> 
+</html>

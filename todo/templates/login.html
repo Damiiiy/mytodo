@@ -1,0 +1,52 @@
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log in </title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+         <div class="wrapper">
+            <div class="title">
+                 User Login
+            </div>
+                <form method="POST">
+                  {% csrf_token %}
+                  <div class="field">
+                    <input type="text" name="username" placeholder="Enter your Username">
+                    <label>Username</label>
+                  </div>
+                  <br>
+                  <div class="field">
+                    <input type="password" name="password" placeholder="Enter Password" >
+                    <label>Password</label>
+                  </div>
+                  <div class="err-link">
+                    {% if error %}
+                      <h5 style="color: red;"> {{ error }} </h5>
+                    {% endif %}
+                 </div>
+                  
+                  <br>
+                  <br>
+                <div class="field">
+                    <input type="submit" value="Login">
+                </div>
+                <div class="signup-link">
+                  Not a member? <a href={% url "signup" %}>Signup now</a>
+               </div>
+        
+                </form>
+              </div>
+            </div>
+            {% if log_error  %}
+              <script>
+                var myvar = "{{ log_error }}";
+                alert(myvar);
+              </script>
+            {% endif %}
+</body>
+  
+</html>

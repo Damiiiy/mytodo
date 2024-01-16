@@ -1,0 +1,52 @@
+{% load static %}
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up </title>
+    <link rel="stylesheet" href=" {% static 'css/style.css' %}">
+    
+</head>
+<body>
+                      
+          <div class="wrapper">
+            <div class="title">
+                User SignUp
+            </div>
+            <form method="POST" name="myForm" class="myForm">
+                {% if success %}
+                  <div class= "success-msg">
+                    <i class="fa fa-check"></i>
+                        <h4 style="color: green;">{{ success }}</h4>
+                  </div>
+                {% endif %}
+                {% csrf_token %}
+                <div class="field">
+                  <input type="text" name="username" placeholder="Create a User name" >
+                  <label>Username</label>
+                </div>
+              <br>
+              <div class="field">
+                <input type="password" name="password" placeholder="Enter Password">
+                <label>Password</label>
+              </div>
+              <div class="err-link">
+                {% if error1 %}
+                  <h5 style="color: red;"> {{ error1 }} </h5>
+                {% endif %}
+            </div>
+            <div class="err-link">
+              {% if error %}
+                <h5 style="color: red;"> {{ error }} </h5>
+              {% endif %}
+          </div>
+          <div class="field">
+            <input type="submit" value="Login">
+          </div>
+          <div class="signup-link">
+            Already a member? <a href={% url "login" %}>Login now</a>
+          </div>
+          </form>
+          </div>
+        </div>
+    </body>
+  
+    </html>

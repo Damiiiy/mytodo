@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update Task</title>
+</head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<link rel="stylesheet" href=" {% static "css/style1.css" %}">
+
+<body>
+    <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col col-lg-9 col-xl-7">
+              <div class="card rounded-3">
+                <div class="card-body p-4">
+                    <h1>Create Task</h1>
+                    <form method="POST">
+                        {% csrf_token %}
+                        <label class="fw-bold p-3 input-group-lg" for="task_name" style="font-family: Arial;">Task Name:</label>
+                        <input class="input-group-lg" type="text" name="task_name" value="" required>
+                        <br/>
+                        <label class="fw-bold p-3"for="task_complete" style="font-family: Arial;">Status</label>
+                        <select class="p-1" style= " width: 90px;" name="task_complete" id="tasl_complete"> <br>
+                           <option value="False">Not Completed</option> 
+                           <option value="True">Completed</option>  
+                        </select>
+                        <div class="input-group">
+                            <label for="description" class=" fw-bold p-3">Description</label>
+                            <input type="textarea" name="task_description" value="{{task.description}}" class="form-control" aria-label="With textarea"></textarea>
+                        </div>
+                        
+                        <input class="btn btn-primary" type="submit" value="create">
+                    </form>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
