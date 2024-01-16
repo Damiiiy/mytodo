@@ -1,0 +1,125 @@
+body {
+    background-color: #eee;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+  }
+  
+  .myForm input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    width: 300px;
+    border: none;
+    border-bottom: 2px solid #999;
+    padding: 5px;
+    font-family: "AgencyFB";
+    background-color: transparent;
+    color: #fff;
+    font-weight: bold;
+  }
+  
+  .myForm .btn {
+    width: auto;
+    border: none;
+    padding: 8px;
+    background-color: limegreen;
+    text-transform: uppercase;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .myForm .btn:hover {
+    background-color: rgb(0, 0, 0);
+    color: #fff;
+  }
+  
+  a:hover {
+    color: purple;
+  }
+  
+  a {
+    color: skyblue;
+  }
+  h6{
+    color: rgba(250, 0, 0, 0.93);
+  }
+  .err{ 
+    font-family: serif;
+    width: fit-content; 
+    position: center;
+    text-align: center;
+    margin: auto;
+  }
+  .success-msg{
+    position: center;;
+    margin: auto ;
+    padding: 5px ;
+    border-radius: 3px 3px 3px 3px;
+    color: #270;
+    background-color: #dff2bf;
+    width: 300px;
+  }
+
+  /*  */
+
+  body {
+    background-color: #eee;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+  }
+  
+  .myForm input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    width: 300px;
+    border: none;
+    border-bottom: 2px solid #999;
+    padding: 5px;
+    font-family: "AgencyFB";
+    background-color: transparent;
+    color: #fff;
+    font-weight: bold;
+  }
+  
+  .myForm .btn {
+    width: auto;
+    border: none;
+    padding: 8px;
+    background-color: limegreen;
+    text-transform: uppercase;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .myForm .btn:hover {
+    background-color: rgb(0, 0, 0);
+    color: #fff;
+  }
+  
+  a:hover {
+    color: purple;
+  }
+  
+  a {
+    color: skyblue;
+  }
+  h6{
+    color: rgba(250, 0, 0, 0.93);
+  }
+  .err{ 
+    font-family: serif;
+    width: fit-content; 
+    position: center;
+    text-align: center;
+    margin: auto;
+  }
+  .success-msg{
+    position: center;;
+    margin: auto ;
+    padding: 5px ;
+    border-radius: 3px 3px 3px 3px;
+    color: #270;
+    background-color: #dff2bf;
+    width: 300px;
+  }
