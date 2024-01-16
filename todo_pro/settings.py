@@ -81,7 +81,7 @@ WSGI_APPLICATION = 'todo_pro.wsgi.application'
 
 DATABASE = {
     'default': dj_database_url.config(
-        default=os.environ.get('internal_db_url')
+        default=os.environ.get('DATABASE_URL')
     )
 }
 
