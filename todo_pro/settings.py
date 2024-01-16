@@ -80,7 +80,7 @@ WSGI_APPLICATION = 'todo_pro.wsgi.application'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
 DATABASE = {
-    'default': dj_database_url.config(
+    'default': dj_database_url.parse(
         default=os.environ.get('DATABASE_URL')
     )
 }
