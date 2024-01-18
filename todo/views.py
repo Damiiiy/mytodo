@@ -23,7 +23,8 @@ def signup(request):
         except IntegrityError:
             return render(request, 'signup.html', {'error': f"Username \"{username}\" Already Exists" })
         
-        return HttpResponse(templates.render({'success': f"Dear {username}, Your account has been created"}, request))
+        # return HttpResponse(templates.render({'success': f"Dear {username}, Your account has been created"}, request))
+        return redirect('login')
     return render(request, 'signup.html')
 
 def user_login(request):
