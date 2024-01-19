@@ -21,16 +21,16 @@
                         <input class="input-group-lg" type="text" name="task_name" value="" required>
                         <br/>
                         <label class="fw-bold p-3"for="task_complete" style="font-family: Arial;">Status</label>
-                        <select class="p-1" style= " width: 90px;" name="task_complete" id="tasl_complete"> <br>
+                        <select class="p-1" style= " width: 90px;" name="task_complete" id="tasl_complete" value= "{{task.completed}}"> <br>
                            <option value="False">Not Completed</option> 
                            <option value="True">Completed</option>  
                         </select>
                         <div class="input-group">
                             <label for="description" class=" fw-bold p-3">Description</label>
-                            <input type="textarea" name="task_description" value="{{task.description}}" class="form-control" aria-label="With textarea"></textarea>
+                            <input type="textarea" name="task_description" class="form-control" aria-label="With textarea"></textarea>
                         </div>
                         
-                        <input class="btn btn-primary" type="submit" value="create">
+                        <input class="btn btn-primary" type="submit" value="Create">
                     </form>
                 </div>
               </div>

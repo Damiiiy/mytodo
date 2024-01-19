@@ -74,13 +74,13 @@ def dbd(request):
         except CustomUser.DoesNotExist:
             pass
     else:
-         templates = loader.get_template('login.html')
-         context ={
-             'log_error': 'You must login to access this page'
-         }
-         return HttpResponse(templates.render(context, request))
+        #  templates = loader.get_template('login.html')
+        #  context ={
+        #      'log_error': 'You must login to access this page'
+        #  }
+        #  return HttpResponse(templates.render(context, request))
         # return render(request ,'login', {'log_error': 'You must login to access this page'})
-        # return redirect('login')  # Redirect to the login page if not logged in
+        return redirect('login')  # Redirect to the login page if not logged in
 
 
 def add_task(request):
